@@ -1,6 +1,6 @@
-# Star Wars Universe
+# Superhero Database
 
-Fullstack project for displaying data from the Star Wars universe in tables. It uses NestJS, TypeORM with PostgreSQL for the backend and React for the UI.
+Fullstack project for displaying superhero data from. It uses NestJS, TypeORM with PostgreSQL for the backend and React for the UI.
 
 ## Prerequisites
 
