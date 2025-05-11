@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.card {
+  @include card-style;
+  width: 100%;
+  max-width: 700px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.images {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.image {
+  width: 75px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.nickname {
+  margin-left: 10px;
+}
+
+.removeButton {
+  background-color: $secondary-color;
+  color: white;
+  @include button-style;
+}

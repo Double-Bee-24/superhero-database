@@ -1,0 +1,30 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.imagesWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.image {
+  width: 200px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  transition: transform $transition-speed;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.imagesTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: $primary-color;
+  position: relative;
+}

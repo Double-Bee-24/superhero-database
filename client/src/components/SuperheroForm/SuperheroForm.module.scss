@@ -1,0 +1,121 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "sass:color";
+
+.formHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.image {
+  width: 150px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  transition: transform $transition-speed;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.titleInput {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 2px solid $primary-color;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-top: 40px;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.3);
+  }
+}
+
+.errorMessage {
+  color: $secondary-color;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.card {
+  @include card-style;
+  width: 100%;
+  max-width: 700px;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  text-align: left;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.fieldLabel {
+  display: inline;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: $primary-color;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  min-height: 100px;
+  resize: vertical;
+  margin-left: 10px;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+  }
+}
+
+.fileInput {
+  margin: 20px;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.imageGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.deleteButton {
+  background-color: $secondary-color;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: color.scale($secondary-color, $lightness: -15%);
+  }
+}

@@ -1,0 +1,53 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+// Main styles
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: $text-primary;
+}
+
+.error {
+  padding: 1rem;
+  background-color: rgba($secondary-color, 0.1);
+  color: $secondary-color;
+  border-left: 4px solid $secondary-color;
+  border-radius: 4px;
+  max-width: 600px;
+  width: 100%;
+  font-weight: 500;
+}
+
+// For image upload section
+.uploadSection {
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 700px;
+
+  input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .uploadButton {
+    @include button-style;
+    background-color: $primary-color;
+    color: white;
+    display: inline-block;
+    text-align: center;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}

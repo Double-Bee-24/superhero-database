@@ -1,0 +1,10 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.addButton {
+  background-color: rgb(29, 159, 29);
+  color: white;
+  align-self: center;
+  margin: 40px;
+  @include button-style;
+}

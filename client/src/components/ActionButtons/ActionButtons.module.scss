@@ -1,0 +1,31 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  background: white;
+  bottom: 0;
+  position: sticky;
+  padding: 1rem;
+}
+.saveButton {
+  @include button-style;
+  background-color: #28a745;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: #28a745;
+  }
+}
+.cancelButton {
+  @include button-style;
+  background-color: #6c757d;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: #6c757d, 10%;
+  }
+}

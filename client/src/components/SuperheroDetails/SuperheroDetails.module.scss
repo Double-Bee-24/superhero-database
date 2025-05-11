@@ -1,0 +1,75 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: $primary-color;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+
+.card {
+  @include card-style;
+  width: 100%;
+  max-width: 700px;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  text-align: left;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.fieldLabel {
+  display: inline;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: $primary-color;
+}
+
+.fieldValue {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $text-secondary;
+  margin: 0.5rem 0 1.5rem;
+  white-space: pre-line;
+  margin-left: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.editButton {
+  @include button-style;
+  background-color: $primary-color;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: $primary-color;
+  }
+}
+
+.editButtonContainer {
+  background-color: white;
+  position: sticky;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

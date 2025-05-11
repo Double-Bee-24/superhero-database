@@ -1,0 +1,31 @@
+services:
+  backend:
+    container_name: superhero-app-backend
+    env_file:
+      - ./server/.env
+    build:
+      context: server/
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./server/uploads:/usr/src/app/uploads
+  postgres_db:
+    container_name: superhero-app-postgres
+    env_file:
+      - ./server/.env
+    image: postgres
+    restart: always
+    # set shared memory limit when using docker-compose
+    shm_size: 128mb
+    ports:
+      - "5434:5432"
+  frontend:
+    container_name: superhero-app-frontend
+    env_file:
+      - ./client/.env
+    build:
+      context: client/
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"

@@ -1,0 +1,59 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "sass:color";
+
+.fileInput {
+  margin: 20px;
+}
+
+.imageGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.image {
+  width: 150px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  transition: transform $transition-speed;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.deleteButton {
+  background-color: $secondary-color;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: color.scale($secondary-color, $lightness: -15%);
+  }
+}
+
+.uploadButton {
+  @include button-style;
+  background-color: $primary-color;
+  color: white;
+  display: inline-block;
+  text-align: center;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
