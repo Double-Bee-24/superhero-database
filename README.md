@@ -52,13 +52,13 @@ Alternatively, if you don't have or don't want to install Docker, you can run th
 1. Clone the repository:
 
 ```bash
-   git clone https://github.com/Double-Bee-24/will-be-created-in-the-future.git
+   git clone https://github.com/Double-Bee-24/superhero-database.git
 ```
 
 2. Enter the project folder:
 
 ```bash
-   cd will-be-created-in-the-future
+   cd superhero-database
 ```
 
 If you don't run Docker, you have to register a PostgreSQL database and configure it in the .env file
