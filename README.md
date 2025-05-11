@@ -113,6 +113,12 @@ npm run start:dev
 
 In the browser, open http://localhost:4000/api/docs, here you will see the API Swagger documentation
 
+While the server running, enter to 'server' folder again and execute migrations:
+
+```bash
+npm run migration:run
+```
+
 Run the client:
 
 ```bash
